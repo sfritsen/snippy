@@ -1,8 +1,5 @@
 body {
     background: $background_color;
-}
-
-nav {
-    background: $accent_color;
-    color: $accent_alt_color;
+    font-family: 'Noto Sans', sans-serif;
+    color: $font_color;
 }
