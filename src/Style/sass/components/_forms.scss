@@ -1,0 +1,20 @@
+.form_container {
+    width: 750px;
+    text-align: left;
+}
+.form_container .right_align {
+    text-align: right;
+}
+label {
+    display: block;
+    text-transform: $label_text_transform;
+    font-size: $label_font_size;
+}
+textarea {
+    background: $fe_bg_color;
+    border: 1px solid $fe_border_color;
+    border-radius: $border-radius;
+    width: 100%;
+    height: $fe_text_area_height;
+    margin: $fe_element_margin;
+}

@@ -148,6 +148,165 @@ hr {
   opacity: 0;
 }
 
+:root {
+  --sl-gutter-x: 1.5rem;
+  --sl-gutter-y: 0;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-right: calc(var(--sl-gutter-x) * 0.5);
+  padding-left: calc(var(--sl-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container,
+.container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+.container-md,
+.container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+.container-lg,
+.container-md,
+.container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 1320px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--sl-gutter-y));
+  margin-right: calc(-0.5 * var(--sl-gutter-x));
+  margin-left: calc(-0.5 * var(--sl-gutter-x));
+}
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--sl-gutter-x) * 0.5);
+  padding-left: calc(var(--sl-gutter-x) * 0.5);
+  margin-top: var(--sl-gutter-y);
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+/**
+CENTER VERTICAL AND HORIZONTAL
+- Use as wrapper
+- If using to align grid, place outside of container
+**/
+.vh-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
 body {
   background: #0D1117;
   font-family: "Noto Sans", sans-serif;
@@ -159,4 +318,49 @@ nav.navbar {
   padding: 16px;
   font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.form_container {
+  width: 750px;
+  text-align: left;
+}
+
+.form_container .right_align {
+  text-align: right;
+}
+
+label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+textarea {
+  background: #010409;
+  border: 1px solid #393C41;
+  border-radius: 4px;
+  width: 100%;
+  height: 300px;
+  margin: 6px 0;
+}
+
+.btn {
+  background: #9BB54A;
+  border: 1px solid #9BB54A;
+  text-transform: uppercase;
+  min-width: 125px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-size: 0.9rem;
+  transition: 0.4s;
+}
+
+.btn:last-child {
+  margin-right: 0;
+}
+
+.btn:hover {
+  background: #bada55;
 }
